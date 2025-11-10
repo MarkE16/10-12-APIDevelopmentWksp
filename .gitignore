@@ -1,0 +1,5 @@
+client/node_modules
+client/pnpm-lock.yaml
+client/package-lock.json
+
+/**/.venv
