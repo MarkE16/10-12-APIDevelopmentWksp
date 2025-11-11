@@ -8,6 +8,7 @@ let socket = null;
  * @param isSelf Whether the message is sent by the current user.
  * @returns
  */
+//@ts-ignore
 function addMessageToChat(
   message: string,
   username: string,

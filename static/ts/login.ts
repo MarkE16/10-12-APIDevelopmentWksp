@@ -1,6 +1,6 @@
 async function login() {
-  const input = document.getElementById("username") as HTMLInputElement;
-  const username = input.value.trim();
+  // const input = document.getElementById("username") as HTMLInputElement;
+  // const username = input.value.trim();
   // ... make API call to log in the user ...
 }
 
