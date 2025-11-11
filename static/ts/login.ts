@@ -11,7 +11,8 @@ async function login() {
   if (res.ok) {
     window.location.href = "/chat";
   } else {
-    alert("Login failed");
+    const reason = await res.text();
+    alert(`Login failed: ${reason}`);
   }
 }
 
