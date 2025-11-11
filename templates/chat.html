@@ -8,6 +8,10 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='styles/main.css') }}"
     />
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script>
+      window.username = {{username|tojson}};
+    </script>
     <script
       type="module"
       src="{{ url_for('static', filename='js/chat.js') }}"
@@ -23,7 +27,7 @@
 
     <footer>
       <input id="msgInput" type="text" placeholder="Type a message..." />
-      <button id="sendBtn">Send</button>
+      <button id="sendBtn" onclick="sendMessage();">Send</button>
     </footer>
   </body>
 </html>
