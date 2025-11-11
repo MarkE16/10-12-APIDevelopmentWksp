@@ -1,5 +1,9 @@
-client/node_modules
-client/pnpm-lock.yaml
-client/package-lock.json
+node_modules
+pnpm-lock.yaml
+package-lock.json
 
-/**/.venv
+.venv
+.env
+/**/__pycache__/
+
+instance

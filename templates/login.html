@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Chat Workshop</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/main.css')}}"
+    />
+    <script
+      type="module"
+      src="{{ url_for('static', filename='js/main.js') }}"
+    ></script>
+  </head>
+  <body class="login-body">
+    <div class="login-box">
+      <h1>Join the Chat</h1>
+      <!-- <form id="login-form"> -->
+      <input
+        type="text"
+        id="username"
+        placeholder="Enter your name..."
+        required
+      />
+      <button onclick="login('hello', 'world');">Enter Chat</button>
+      <!--</form> -->
+    </div>
+  </body>
+</html>

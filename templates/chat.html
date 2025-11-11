@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Room | Chat Workshop</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/main.css') }}"
+    />
+    <script
+      type="module"
+      src="{{ url_for('static', filename='js/chat.js') }}"
+    ></script>
+  </head>
+  <body class="chat-body">
+    <header>
+      <span>Chat Room</span>
+      <span id="user"></span>
+    </header>
+
+    <div class="chat-container" id="chat"></div>
+
+    <footer>
+      <input id="msgInput" type="text" placeholder="Type a message..." />
+      <button id="sendBtn">Send</button>
+    </footer>
+  </body>
+</html>

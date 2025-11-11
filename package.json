@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tsc && cross-env"
+    "start": "tsc && python app.py"
   },
   "keywords": [],
   "author": "",
