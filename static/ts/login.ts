@@ -1,14 +1,20 @@
-function login(username: string, password: string): void {
-  alert(`Logging in with ${username} and ${password}.`);
+async function login() {
+  const input = document.getElementById("username") as HTMLInputElement;
+  const username = input.value.trim();
+  // ... make API call to log in the user ...
 }
 
-export function loadFunctions() {
+document.addEventListener("DOMContentLoaded", () => {
   window.login = login;
-}
+});
 
-// This is so that TypeScript knows about the login function on the window object
+// This is needed so that Typescript
+// is aware of the login function
+// being added to the window object
 declare global {
   interface Window {
-    login(username: string, password: string): void;
+    login: () => Promise<void>;
   }
 }
+
+export {};
