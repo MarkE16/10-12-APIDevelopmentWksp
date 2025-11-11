@@ -1,6 +1,32 @@
-function login(username, password) {
-    alert(`Logging in with ${username} and ${password}.`);
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+function login() {
+    return __awaiter(this, void 0, void 0, function* () {
+        const input = document.getElementById("username");
+        const username = input.value.trim();
+        const res = yield fetch("/api/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ username }),
+        });
+        if (res.ok) {
+            window.location.href = "/chat";
+        }
+        else {
+            alert("Login failed");
+        }
+    });
 }
-export function loadFunctions() {
+document.addEventListener("DOMContentLoaded", () => {
     window.login = login;
-}
+});
+export {};
