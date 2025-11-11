@@ -36,36 +36,6 @@ def chat() -> None:
 
 ### Endpoints
 
-@app.route('/api/login', methods=['POST'])
-def login():
-    username = None
-    data = request.get_json()
-    username = data.get('username')
-
-    if not username:
-        pass
-        # return ...
-
-    # Find or create the user
-    existing = User.query.filter_by(username=username).first()
-    if not existing:
-        # add new user...
-        # new_user = ...
-        try:
-            pass
-        except Exception as e:
-            db.session.rollback()
-            # Return a JSON error so clients can handle it
-            # return ...
-    else:
-        new_user = existing
-
-    session['user_id'] = str(new_user.id)
-    session['username'] = new_user.username
-
-    # Return JSON representation of the user
-    # return ...
-
 ### SocketIO Events
 
 if __name__ == '__main__':
